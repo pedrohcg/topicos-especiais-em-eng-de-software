@@ -3,5 +3,5 @@ export default interface ICreatePavementDTO{
     cep: string;
     dtUltimaIntervencao: Date;
     IGG: number;
-    criticality: number;
+    criticality: string;
 }

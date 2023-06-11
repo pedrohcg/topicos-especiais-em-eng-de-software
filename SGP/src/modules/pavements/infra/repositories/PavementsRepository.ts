@@ -25,7 +25,7 @@ class PavementsRepository implements IPavementsRepository{
         return await collection.insertOne({nome: nome, cep: cep, dtUltimaIntervencao: dtUltimaIntervencao, IGG: IGG, criticidade: criticality});
     }
 
-    public async update(id: ObjectId, nome?: string, dtUltimaIntervencao?: Date, IGG?: number, criticality?: number) {
+    public async update(id: ObjectId, nome?: string, dtUltimaIntervencao?: Date, IGG?: number, criticality?: string) {
         await this.client.connect();
 
         const db = this.client.db(this.dbName);

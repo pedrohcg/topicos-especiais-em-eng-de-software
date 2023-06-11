@@ -4,17 +4,17 @@ import {injectable} from 'tsyringe';
 class CalculateCriticalityService{
     constructor(){}
 
-    public async execute(IGG: number): Promise<number>{
+    public async execute(IGG: number): Promise<string>{
         if(IGG <= 20){
-            return 1;
+            return 'Otimo';
         } else if (IGG <=40){
-            return 2;
+            return 'Bom';
         } else if (IGG <= 80){
-            return 3;
+            return 'Regular';
         } else if (IGG <= 160){
-            return 4;
+            return 'Ruim';
         } else{
-            return 5;
+            return 'Pessimo';
         }
     }
 }
